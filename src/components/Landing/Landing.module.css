@@ -1,0 +1,58 @@
+.Landing {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.Title {
+  text-align: center;
+  background-color: rebeccapurple;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+}
+
+.FormWrap {
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+
+.Form {
+  display: flex;
+  flex-flow: column;
+}
+
+.Form label {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+.Form input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid rgb(184, 184, 184);
+  margin-bottom: 10px;
+  letter-spacing: 0.1rem;
+  outline: none;
+}
+
+.Form button {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid rgb(121, 66, 175);
+  background-color: rebeccapurple;
+  color: rgb(70, 70, 70);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  outline: none;
+}
+
+.ErrorText {
+  color: rgb(189, 11, 11);
+  text-align: center;
+  margin-top: 10px;
+}

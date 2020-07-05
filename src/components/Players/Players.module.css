@@ -1,0 +1,9 @@
+.PlayersContainer {
+  overflow: scroll;
+  height: 300px;
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 20px;
+}

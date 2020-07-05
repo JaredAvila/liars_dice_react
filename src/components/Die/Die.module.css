@@ -1,0 +1,32 @@
+.Dot,
+.TwoDn,
+.TwoUp,
+.ThreeMid {
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+.Two {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 70%;
+  padding: 8px;
+}
+
+.TwoDn {
+  align-self: flex-end;
+}
+
+.ThreeMid {
+  align-self: center;
+}
+
+.FourTop,
+.FourBot {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

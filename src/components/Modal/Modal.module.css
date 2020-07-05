@@ -1,0 +1,42 @@
+.Call {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Form {
+  width: 70%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.FormTitle {
+  color: rebeccapurple;
+}
+
+.ErrorText {
+  color: rgb(218, 12, 12);
+}
+
+.Form input {
+  width: 60px;
+}
+
+.Form button {
+  padding: 5px 30px;
+  margin-top: 10px;
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+}

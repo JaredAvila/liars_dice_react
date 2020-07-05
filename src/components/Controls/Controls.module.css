@@ -1,0 +1,34 @@
+.HandTitle {
+  background-color: rebeccapurple;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.LiftContainer {
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rebeccapurple;
+}
+
+.LiftContainer button {
+  padding: 10px 50px;
+  background-color: white;
+  color: rebeccapurple;
+  border: 1px solid rgb(216, 192, 240);
+  outline: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  transition: all 250ms ease;
+}
+
+.LiftContainer button:hover,
+.LiftContainer button:hover:active {
+  background-color: rgb(216, 192, 240);
+  color: rgb(70, 35, 105);
+}

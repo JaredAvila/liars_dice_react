@@ -1,0 +1,22 @@
+.PlayerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+.PlayerContainerActive {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: rgb(255, 235, 124);
+  border-radius: 10px;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.Player {
+  margin: 5px 0;
+}
