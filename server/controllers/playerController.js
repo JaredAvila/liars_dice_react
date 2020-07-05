@@ -1,86 +1,52 @@
-const fs = require('fs');
-
-const players = JSON.parse(
-	fs.readFileSync(`${__dirname}/../dev-data/data/players.json`)
-);
+const Player = require('./../models/playerModel');
 
 exports.getAllPlayers = (req, res) => {
 	res.status(200).json({
 		status: 'success',
 		results: players.length,
 		data: {
-			players,
+			players: 'Players go here',
 		},
 	});
 };
 
 exports.getPlayer = (req, res) => {
-	const id = req.params.id * 1;
-	const player = players.find((el) => el.id === id);
-
-	if (!player) {
-		return res.status(404).json({
-			status: 'fail',
-			message: 'Invalid ID',
-		});
-	}
-
 	res.status(200).json({
 		status: 'success',
 		data: {
-			player,
+			player: 'Player goes here',
 		},
 	});
 };
 
-exports.createNewPlayer = (req, res) => {
-	const newId = players[players.length - 1].id + 1;
-	const newPlayer = Object.assign({ id: newId }, req.body);
-
-	players.push(newPlayer);
-	fs.writeFile(
-		`${__dirname}/dev-data/data/players.json`,
-		JSON.stringify(players),
-		(err) => {
-			res.status(201).json({
-				status: 'success',
-				data: {
-					player: newPlayer,
-				},
-			});
-		}
-	);
+exports.createNewPlayer = async (req, res) => {
+	try {
+		const newPlayer = await Player.create(req.body);
+		res.status(201).json({
+			status: 'success',
+			data: {
+				player: newPlayer,
+			},
+		});
+	} catch (err) {
+		res.status(400).json({
+			status: 'fail',
+			message: 'There was an error saving',
+			error: err,
+		});
+	}
 };
 
 exports.updatePlayer = (req, res) => {
-	const id = req.params.id * 1;
-	const player = players.find((el) => el.id === id);
-
-	if (!player) {
-		return res.status(404).json({
-			status: 'fail',
-			message: 'Invalid ID',
-		});
-	}
 	res.status(201).json({
 		status: 'success',
 		data: {
-			player,
-			id,
+			player: 'Player goes here',
 		},
 	});
 };
 
 exports.deletePlayer = (req, res) => {
-	const id = req.params.id * 1;
-	const player = players.find((el) => el.id === id);
-
-	if (!player) {
-		return res.status(404).json({
-			status: 'fail',
-			message: 'Invalid ID',
-		});
-	}
 	res.status(204).json({
 		status: 'success',
 		data: null,
