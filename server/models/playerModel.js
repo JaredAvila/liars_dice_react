@@ -10,7 +10,7 @@ const playerScheuma = new mongoose.Schema({
 		type: Boolean,
 		default: false,
 	},
-	lastCall: Number,
+	lastCall: Array,
 	hand: Array,
 });
 
